@@ -1,0 +1,23 @@
+<template>
+    <button>Find</button>
+</template>
+
+<script></script>
+
+<style lang="scss" scoped>
+    button{
+        background-color: $primary-color;
+        color: white;
+        border-radius: 3px;
+        width: 100%;
+        display: block;
+        border: none;
+        margin-top: 15px;
+        padding: 8px 20px;
+        transition: .2s ease-out;
+        cursor: pointer;
+        &:hover{
+            background-color: darken($primary-color, 15%);
+        }
+    }
+</style>
