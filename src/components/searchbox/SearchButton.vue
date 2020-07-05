@@ -1,8 +1,17 @@
 <template>
-    <button>Find</button>
+    <button>Find character in {{selectedQuery.name}}</button>
 </template>
 
-<script></script>
+
+<script>
+  export default {
+    computed: {
+      selectedQuery(){
+        return this.$store.getters.getSelectedQuery;
+      }
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
     button{
@@ -16,6 +25,8 @@
         padding: 8px 20px;
         transition: .2s ease-out;
         cursor: pointer;
+        font-family: $title-font-family;
+        font-size: 18px;
         &:hover{
             background-color: darken($primary-color, 15%);
         }

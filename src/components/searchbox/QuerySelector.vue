@@ -1,6 +1,8 @@
 <template>
     <div class="query-selector">
-        <app-query :key="i" v-for="i in 3"></app-query>
+        <app-query :key="i"
+                   v-for="(query, i) in queries"
+                   :query="query"></app-query>
     </div>
 </template>
 
@@ -10,6 +12,11 @@
     export default {
       components: {
         'appQuery': Query
+      },
+      computed: {
+        queries(){
+          return this.$store.getters.getQueryParameters;
+        }
       }
     }
 </script>

@@ -1,13 +1,28 @@
 <template>
     <div>
-        <h2 class="title">
-            What's the name of the ... where you wanna look?
-        </h2>
-        <input class="search" type="text" placeholder="Search by ...">
+        <div v-if="selectedQuery">
+            <h2 class="title">
+                What's the name of the {{ selectedQuery.name }} where you wanna look?
+            </h2>
+            <input class="search" type="text" placeholder="Search by ...">
+        </div>
+        <div v-else>
+            <h2 class="title">
+                First select where you want to search for your character!
+            </h2>
+        </div>
     </div>
 </template>
 
-<script></script>
+<script>
+    export default {
+      computed: {
+        selectedQuery(){
+          return this.$store.getters.getSelectedQuery;
+        }
+      }
+    }
+</script>
 
 <style lang="scss">
     h2.title{
