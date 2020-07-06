@@ -13,18 +13,21 @@
 
 <script>
     export default {
+        name: 'SearchQuery',
         props: {
-          query: Object
+            query: Object,
         },
         methods: {
-          selectQuery(query) {
-            this.$store.commit('SELECT_QUERY', query);
-          }
-        }
+            selectQuery(query) {
+                // selects query in store
+                this.$store.commit('SELECT_QUERY', query);
+            },
+        },
     }
 </script>
 
 <style lang="scss" scoped>
+    // set animations in the container
     .query-container{
         transition: .3s ease-out;
         &:hover, &.selected{
@@ -35,9 +38,15 @@
             position: relative;
             flex: 1;
             width: 100px;
+            height: 100px;
             max-width: 100px;
             max-height: 100px;
-            height: 100px;
+            @media screen and (max-width: 899px) {
+                width: 75px;
+                height: 75px;
+                max-width: 75px;
+                max-height: 75px;
+            }
             border-radius: 50%;
             box-shadow: $box-shadow-large;
             img{

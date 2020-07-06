@@ -9,7 +9,6 @@
                 &
             </div>
             <app-search />
-            <app-search-button></app-search-button>
         </div>
     </div>
 </template>
@@ -17,19 +16,23 @@
 <script>
     import QuerySelector from '@/components/searchbox/QuerySelector'
     import Search from '@/components/searchbox/Search'
-    import SearchButton from '@/components/searchbox/SearchButton'
 
     export default {
-      name: 'SearchboxContainer',
-      components: {
-        'appQuerySelector': QuerySelector,
-        'appSearch': Search,
-        'appSearchButton': SearchButton
-      }
+        name: 'SearchboxContainer',
+        components: {
+            // Component containing all the different queries
+            'appQuerySelector': QuerySelector,
+            // Component containing the search-form
+            'appSearch': Search,
+        },
+        mounted(){
+            this.$store.commit('RESET_CHARACTERS');
+        },
     }
 </script>
 
 <style lang="scss" scoped>
+    // container box with shadow
     .box{
         max-width: 600px;
         width: 100%;
@@ -42,6 +45,7 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        // big "&" sign
         .ampersand{
             position: relative;
             top: -20px;

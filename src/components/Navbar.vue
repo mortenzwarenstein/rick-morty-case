@@ -2,12 +2,11 @@
     <nav id="nav">
         <div class="nav-container">
             <div>
-                <div class="nav-item">LOGO</div>
-            </div>
-            <div class="right menu">
-                <div class="nav-item">Home</div>
-                <div class="nav-item">Contact</div>
-                <div class="nav-item">Menu</div>
+                <div class="nav-item">
+                    <router-link to="/" >
+                        Back to home
+                    </router-link>
+                </div>
             </div>
         </div>
     </nav>
@@ -17,6 +16,7 @@
     nav#nav{
         background-color: $primary-color;
         color: white;
+        // nav container using mixin
         .nav-container{
             @include container;
             display: flex;
@@ -36,6 +36,13 @@
         }
         &:last-of-type{
             padding-right: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
 </style>

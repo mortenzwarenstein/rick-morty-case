@@ -7,17 +7,19 @@
 </template>
 
 <script>
-    import Query from "./Query";
+    import Query from '@/components/searchbox/Query';
 
     export default {
-      components: {
-        'appQuery': Query
-      },
-      computed: {
-        queries(){
-          return this.$store.getters.getQueryParameters;
-        }
-      }
+        name: 'SearchQueryContainer',
+        components: {
+            'appQuery': Query,
+        },
+        computed: {
+            queries(){
+                // get fixed queries from store
+                return this.$store.getters.getQueryParameters;
+            },
+        },
     }
 </script>
 

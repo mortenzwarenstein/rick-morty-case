@@ -7,5 +7,5 @@ module.exports = {
            @import "@/scss/mixins.scss";`
       },
     }
-  }
+  },
 }

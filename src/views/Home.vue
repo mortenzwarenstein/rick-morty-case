@@ -8,10 +8,10 @@
   import Searchbox from '@/components/searchbox/Container';
 
   export default {
-    name: 'Home',
+    name: 'HomeView',
     components: {
-      'appSearchbox': Searchbox
-    }
+      'appSearchbox': Searchbox,
+    },
   }
 </script>
 
