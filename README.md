@@ -24,7 +24,7 @@ In what location did you see the character last? Name the location, and we'll se
 #### Episode
 In what location did you see the character last? Name the episode or use its code (eg. S01E01), and we'll search for you!
 
-## Characters
+### Characters
 All the found characters are listed here
 
 
