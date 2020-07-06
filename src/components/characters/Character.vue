@@ -38,7 +38,7 @@
         props: {
             // Character JSON from the api
             character: Object,
-        }
+        },
     }
 </script>
 

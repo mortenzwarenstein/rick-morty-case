@@ -15,7 +15,7 @@
         data(){
             return{
                 // popup-boolean: open or closed?
-                popup: false
+                popup: false,
             }
         },
         methods: {

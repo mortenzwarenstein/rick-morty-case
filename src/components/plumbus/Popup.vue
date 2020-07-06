@@ -34,7 +34,7 @@
             close(){
                 // sends clicked event to parent: closes modal
                 this.$emit('clicked');
-            }
+            },
         },
     }
 </script>

@@ -57,7 +57,6 @@
                     } else {
                         this.searchResults = []
                     }
-
                 });
             },
             closeOverlay(){
